@@ -67,8 +67,21 @@ deepseek-clone/
 3. Set up environment variables:
    Create a `.env` file in the root directory and add the following:
    ```env
-   MONGO_URI=your-mongodb-connection-string
+   # 👇 Frontend (Public) Clerk Key – starts with pk_...
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+
+   # 👇 Backend (Secret) Clerk Key – starts with sk_...
+   CLERK_SECRET_KEY=your-clerk-secret-key
+
+   # 👇 Your MongoDB connection string
+   MONGODB_URI=your-mongodb-connection-string
+
+   # 👇 Secret key used for signing webhooks (like SVIX)
    SIGNING_SECRET=your-svix-signing-secret
+
+   # 👇 API key for DeepSeek or any AI/chat API service
+   DEEPSEEK_API_KEY=your-deepseek-api-key
+
    ```
 
 4. Run the development server:
@@ -207,6 +220,8 @@ For any questions or support, please contact:
 <div align="center">
 Made with ❤️ by <b>Elysée NIYIBIZI</b>
 </div>
+
+
 
 
 
